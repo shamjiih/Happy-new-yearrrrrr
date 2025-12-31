@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy New Year 🤍</title>
+<title>Happy New Year ✨</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body{
   margin:0;
@@ -11,50 +12,60 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  background: linear-gradient(135deg, #ffecd2, #fcb69f, #ff9a9e);
   font-family: 'Segoe UI', sans-serif;
-  color:#444;
 }
 
 .card{
   background: rgba(255,255,255,0.95);
   padding:45px 35px;
-  border-radius:22px;
-  max-width:440px;
+  border-radius:24px;
+  max-width:420px;
   text-align:center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  animation: fadeIn 2s ease;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  animation: popIn 1.5s ease;
 }
 
 h1{
-  font-weight:500;
   margin-top:0;
+  font-weight:600;
+  background: linear-gradient(135deg, #ff6a88, #ff99ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 p{
   font-size:16px;
   line-height:1.9;
-  margin-bottom:18px;
+  color:#555;
 }
 
 button{
-  margin-top:25px;
-  padding:12px 34px;
+  margin-top:30px;
+  padding:12px 36px;
   border:none;
   border-radius:30px;
-  background:#c8b6a6;
-  color:#fff;
-  font-size:15px;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color:white;
+  font-size:16px;
   cursor:pointer;
+  box-shadow:0 12px 25px rgba(255,120,160,0.4);
+  transition:0.3s;
 }
 
 button:hover{
-  background:#b7a795;
+  transform:scale(1.05);
 }
 
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
+@keyframes popIn{
+  from{
+    opacity:0;
+    transform:scale(0.9);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
 }
 </style>
 </head>
@@ -64,22 +75,22 @@ button:hover{
 <div class="card" id="card">
   <h1>Happy New Year 🎉</h1>
   <p>
-    A brand new year is here,<br>
-    and with it, fresh moments, soft mornings,<br>
-    and new reasons to smile.
+    A fresh year is here,<br>
+    filled with new chances,<br>
+    brighter days, and happy moments.
   </p>
   <button onclick="next()">Continue</button>
 </div>
 
 <script>
 const messages = [
-  "I hope this year brings you calm days and light hearts.",
-  "More laughter, more peace, and moments that feel right.",
-  "May you find happiness in small things and comfort in big dreams.",
-  "Leave behind what was heavy, and carry forward what matters.",
-  "This year, choose yourself a little more.",
-  "And remember — you deserve good things.",
-  "Wishing you a beautiful, gentle year ahead 🤍"
+  "May this year bring you more smiles than worries.",
+  "More laughter, more confidence, more peace.",
+  "May every day feel a little lighter than the last.",
+  "Keep the memories that made you happy.",
+  "Let go of what no longer serves you.",
+  "This year is yours — enjoy every bit of it.",
+  "Wishing you a beautiful, colourful year ahead ✨🤍"
 ];
 
 let i = 0;
