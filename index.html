@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>I’m Here 🤍</title>
+<title>You Are Enough 🤍</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -32,7 +32,7 @@ h1{
   margin-top:0;
   font-size:26px;
   font-weight:600;
-  color:#ff6f91;
+  color:#ff7a8a;
 }
 
 p{
@@ -70,22 +70,22 @@ button:hover{
   to{opacity:1;}
 }
 
-/* Floating hearts */
-.heart{
+/* Falling flowers */
+.flower{
   position:absolute;
-  bottom:-20px;
-  font-size:18px;
-  animation: floatUp 8s linear infinite;
+  top:-30px;
+  font-size:22px;
+  animation: fall linear infinite;
   opacity:0.6;
 }
 
-@keyframes floatUp{
-  from{
-    transform:translateY(0) scale(1);
+@keyframes fall{
+  0%{
+    transform:translateY(0) rotate(0deg);
     opacity:0.6;
   }
-  to{
-    transform:translateY(-110vh) scale(1.4);
+  100%{
+    transform:translateY(110vh) rotate(180deg);
     opacity:0;
   }
 }
@@ -95,26 +95,26 @@ button:hover{
 <body>
 
 <div class="card" id="card">
-  <h1>Hey my girll 🤍</h1>
+  <h1>Hey 🤍</h1>
   <p>
-    I know today might feel heavy,<br>
-    and your thoughts might be running in circles.
+    I know today hurt.<br>
+    And I know it stayed with you longer than it should have.
   </p>
   <button onclick="next()">Continue</button>
 </div>
 
 <script>
 const messages = [
-  "Whatever happened today doesn’t define you.",
-  "One presentation can never measure your talent.",
-  "You prepared, you tried, and that already matters.",
-  "Even if someone didn’t understand your effort — that’s okay.",
-  "Growth isn’t loud. Sometimes it’s quiet and slow.",
-  "I want you to remember this…",
-  "I’m proud of you — always.",
-  "You are capable, creative, and stronger than you feel right now.",
-  "Take a deep breath. You’re safe.",
-  "I’m right here with you 🤍"
+  "What someone says about your body says more about them than about you.",
+  "Your body is not a joke. It never was.",
+  "It holds your warmth, your kindness, your strength.",
+  "You don’t owe anyone a certain shape or size.",
+  "You are allowed to exist exactly as you are.",
+  "Nothing about you needs fixing.",
+  "You are loved — fully and gently.",
+  "Please be soft with yourself tonight.",
+  "These flowers are for you 🌸",
+  "Come here… you’re safe with me 🤍"
 ];
 
 let i = 0;
@@ -124,7 +124,7 @@ function next(){
   if(i < messages.length){
     card.innerHTML = "<p>"+messages[i]+"</p>";
     if(i === messages.length - 1){
-      card.innerHTML += "<div class='signature'>Love,<br>Shamjid 🤍</div>";
+      card.innerHTML += "<div class='signature'>Always here,<br>Shamjid 🤍</div>";
     } else {
       card.innerHTML += "<button onclick='next()'>Continue</button>";
     }
@@ -132,16 +132,16 @@ function next(){
   i++;
 }
 
-/* Create floating hearts */
-const emojis = ["🤍","💕","💖","🌸"];
+/* Flower rain */
+const flowers = ["🌸","🌹","💐","🌺"];
 setInterval(() => {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerText = emojis[Math.floor(Math.random()*emojis.length)];
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (6 + Math.random()*4) + "s";
-  document.body.appendChild(heart);
-  setTimeout(() => heart.remove(), 9000);
+  const flower = document.createElement("div");
+  flower.className = "flower";
+  flower.innerText = flowers[Math.floor(Math.random()*flowers.length)];
+  flower.style.left = Math.random() * 100 + "vw";
+  flower.style.animationDuration = (6 + Math.random()*4) + "s";
+  document.body.appendChild(flower);
+  setTimeout(() => flower.remove(), 10000);
 }, 700);
 </script>
 
